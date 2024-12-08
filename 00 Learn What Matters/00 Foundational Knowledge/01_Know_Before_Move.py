@@ -1,6 +1,6 @@
 # 1. Printing Output in Python
 print("Hello! World.")
-print("Learning Python is fun", end="!\n")  # => Adds '!' at the end and newline
+print("Learning Python is fun", end="!\n")  # => Adds '!' at the end create newline
 
 
 # 2. Getting User Input

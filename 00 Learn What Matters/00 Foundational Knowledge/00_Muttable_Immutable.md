@@ -21,9 +21,8 @@ print(my_dict)  # Output: {'a': 10, 'b': 2}
 
 ### 3. Sets
 ```python
-my_dict = {'a': 1, 'b': 2}
-my_dict['a'] = 10  # Changing the value associated with key 'a'
-print(my_dict)  # Output: {'a': 10, 'b': 2}
+my_set = {1, 2, 3, 4, 5}
+print(my_set)   # Output: {1, 2, 3, 4, 5}
 ```
 
 
