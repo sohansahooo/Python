@@ -1,4 +1,4 @@
-# Lists: Python’s Dynamic Arrays
+# Lists: Python’s Dynamic Arrays 
 my_list = [1, 2, 3]
 
 # Modifying lists with methods
