@@ -5,7 +5,11 @@ import pyttsx3
 engine = pyttsx3.init()
 
 city = input("Enter a city name: ")
+<<<<<<< HEAD
 menu = """Weather Informations (Enter one of the numbers) 
+=======
+menu = '''Weather Informations (Enter one of the numbers) 
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 1. Region
 2. Country
 3. Latitude 
@@ -18,7 +22,11 @@ menu = """Weather Informations (Enter one of the numbers)
 10. Humidity
 11. UV Index
 12. Visibility (km)
+<<<<<<< HEAD
 13. Exit"""
+=======
+13. Exit'''
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 print(menu)
 choice = int(input("Enter your choice: "))
 
@@ -27,7 +35,10 @@ url = f"https://api.weatherapi.com/v1/current.json?key=0f9d885ad2994505b09521282
 response = requests.get(url)
 wdic = json.loads(response.text)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 def get_weather_info(choice, data):
     match choice:
         case 1:
@@ -59,7 +70,10 @@ def get_weather_info(choice, data):
         case _:
             return "Invalid choice! Please select a number from the menu."
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 info = get_weather_info(choice, wdic)
 print(info)
 engine.say(info)
@@ -69,4 +83,7 @@ if choice == 13:
     print("Goodbye!")
     engine.say("Goodbye!")
     engine.runAndWait()
+<<<<<<< HEAD
 
+=======
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb

@@ -15,5 +15,9 @@ print("Our number is:", number)  # => 10
 
 # 4. Simple Conditionals
 result = "Success!" if 5 > 3 else "Failure!"
+<<<<<<< HEAD
 print(result)  # => "Success!"
 8
+=======
+print(result)  # => "Success!"
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb

@@ -24,7 +24,11 @@ class CSV:
             "date": date,
             "amount": amount,
             "category": category,
+<<<<<<< HEAD
             "description": description,
+=======
+            "description": description
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
         }
         with open(cls.CSV_FILE, "a", newline="") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=cls.COLUMNS)
@@ -37,11 +41,16 @@ class CSV:
         df["date"] = pd.to_datetime(df["date"], format=CSV.FORMAT)
         start_date = datetime.strptime(start_date, CSV.FORMAT)
         end_date = datetime.strptime(end_date, CSV.FORMAT)
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
         mask = (df["date"] >= start_date) & (df["date"] <= end_date)
         filtered_df = df.loc[mask]
 
         if filtered_df.empty:
+<<<<<<< HEAD
             print("No transactions found in the given date range")
         else:
             print(
@@ -59,6 +68,15 @@ class CSV:
             total_expense = filtered_df[filtered_df["category"] == "Expense"][
                 "amount"
             ].sum()
+=======
+            print('No transactions found in the given date range')
+        else:
+            print(f"Transactions from {start_date.strftime(CSV.FORMAT)} to {end_date.strftime(CSV.FORMAT)}")
+            print(filtered_df.to_string(index=False, formatters={"date": lambda x: x.strftime(CSV.FORMAT)}))
+
+            total_income = filtered_df[filtered_df["category"] == "Income"]["amount"].sum()
+            total_expense = filtered_df[filtered_df["category"] == "Expense"]["amount"].sum()
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
             print("\nSummary:")
             print(f"Total Income: ${total_income:.2f}")
             print(f"Total Expense: ${total_expense:.2f}")
@@ -70,9 +88,14 @@ class CSV:
 def add():
     CSV.initialize_csv()
     date = get_date(
+<<<<<<< HEAD
         "Enter the date of the transaction (dd-mm-yyyy) or enter for today's date: ",
         allow_default=True,
     )
+=======
+        "Enter the date of the transaction (dd-mm-yyyy) or enter for today's date: ", 
+        allow_default=True)
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
     amount = get_amount()
     category = get_category()
     description = get_description()
@@ -80,7 +103,11 @@ def add():
 
 
 def plot_transactions(df):
+<<<<<<< HEAD
     df.set_index("date", inplace=True)
+=======
+    df.set_index('date', inplace=True)
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 
     income_df = (
         df[df["category"] == "Income"]
@@ -127,10 +154,17 @@ def main():
         else:
             print("Invalid choice. Enter 1, 2 or 3.")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 if __name__ == "__main__":
     main()
 
 
 CSV.get_transactions("01-01-2024", "30-11-2024")
+<<<<<<< HEAD
 add()
+=======
+add()
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb

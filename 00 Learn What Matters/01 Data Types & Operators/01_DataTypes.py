@@ -1,7 +1,13 @@
 # Numbers
+<<<<<<< HEAD
 int_example = 42  # Integer
 float_example = 3.14  # Float
 complex_example = 2 + 3j  # Complex
+=======
+int_example = 42           # Integer
+float_example = 3.14       # Float
+complex_example = 2 + 3j   # Complex
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 
 # Boolean
 bool_true = True
@@ -33,9 +39,15 @@ dict_example["age"] = 26
 
 # Type Conversion
 num = 5
+<<<<<<< HEAD
 float_num = float(num)  # Converts 5 to 5.0
 text_num = str(num)  # Converts 5 to "5"
 bool_value = bool(num)  # Converts 5 to True
+=======
+float_num = float(num)     # Converts 5 to 5.0
+text_num = str(num)        # Converts 5 to "5"
+bool_value = bool(num)     # Converts 5 to True
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
 
 # Print statements to see the examples
 print("Data Types Examples:")
@@ -50,6 +62,10 @@ print(f"List: {list_example}")
 print(f"Tuple: {tuple_example}")
 print(f"Set: {set_example}")
 print(f"Dictionary: {dict_example}")
+<<<<<<< HEAD
 print(
     f"Float Conversion: {float_num}, Text Conversion: {text_num}, Bool Conversion: {bool_value}"
 )
+=======
+print(f"Float Conversion: {float_num}, Text Conversion: {text_num}, Bool Conversion: {bool_value}")
+>>>>>>> efe3b3ada2d610eec982ba16057d48ba96205adb
